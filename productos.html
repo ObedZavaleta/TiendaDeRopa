@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <!--metologia BEM, se crea una clase padre, y despues una clase hijo, especificando el nombre del padre al que pertenece-->
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+            <!--se crea la clase hijo anteponiendo el nombre del padre/ alt= (le declara un texto alternativo por si no carga la imagen)  -->
+        </a>
+    </header>
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+        <!--se hace uso de la clase padre, un elemento de esta clase, y un modificador (--)   -->
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>React JS</h1>
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/3.jpg" alt="Imagen del producto">
+            <div class="camisa__contenido">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eaque beatae. Tempora, deleniti.
+                    Cum perspiciatis at obcaecati voluptate debitis inventore voluptates, consequatur nostrum
+                    consequuntur earum, odio,
+                    quibusdam vel iusto nesciunt.</p>
+
+                <form class="formulario"></form>
+                <select class="formulario__campo">
+                    <!--disable hace que no se pueda seleccionar, selected que si aparezca la descripcion-->
+                    <option disabled selected>--Seleccionar talla--</option>
+                    <option>Chica</option>
+                    <option>Mediana</option>
+                    <option>Grande</option>
+                </select>
+                <!--boton que recibe # de piezas y que el conteo comience con 1-->
+                <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                <input class="formulario__submit" type="submit" value="Agregar al carrito"> <!--submit agrega los datos en los anteriores recuadros al servidor-->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Todos los derechos reservados 2023</p>
+    </footer>
+</body>
+
+</html>
